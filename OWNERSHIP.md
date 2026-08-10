@@ -68,6 +68,13 @@ itself — what each tool *cannot* reach — rather than by policy or trust:
   owner until deliberately adopted per the table above — adoption is a decision,
   not a default.
 
+The same principle governs the **Xano ↔ Shopify** boundary: it runs on **pre-built
+data exchange** — fixed, typed contracts defined in reviewed code (the orders-paid
+webhook that mints entitlements, the customer and consent sync, catalog reads).
+Nothing free-form crosses that boundary at runtime. Changing what is exchanged means
+changing the pre-built contract through the gate — never reaching into either system
+by hand or by agent.
+
 ## The AI / non-AI-dev handoff
 
 ```
