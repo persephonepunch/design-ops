@@ -16,6 +16,18 @@ The nice irony: the lineage of this stack runs back through the HBO GO era — t
 
 **The one-line version: stop sharing the key; share the permission.**
 
+## Where this goes next — screens without pages
+
+The reason this model beats the password isn't just the audit trail. It's that **a grant never needed a login page** — so it works on things that don't have one.
+
+**IoT, without a DOM.** The household's devices — the TV, the thermostat, the console — have no browser and no form to type into. That's exactly where passwords fail hardest (typing a password with a remote is the punishment for the whole model). Here, a device holds a grant the same way a person does: paired once with a short, human-typeable code — an alphabet with no O/0 or I/1, because someone reads it off a screen across the room — and from then on it acts inside its mandate: what it may fetch, until when, for which household. Every request it makes lands in the same ledger as everyone else's. No DOM, no password, no shared secret sitting in a smart TV's settings screen.
+
+**Gaming, with peers.** A game world is just another surface with no page — and "the household" generalizes to "the party." Five peers in a session is the same shape as five household members: a declared count on a grant, passes-on allowed inside it, fan-out beyond it a finding. Items, access, and unlocks travel as grants bound to accounts — a shared item can't be duplicated by forwarding, for the same reason a forwarded invite link can't become a second grant.
+
+**And both run on data shaping.** A device and a game don't read your page — they read the model. The same deterministic shape that renders your banner renders a console lobby or a device's little status screen: one JSON contract, merged the same way every time, with provenance saying which layer set each field. Design once at the model level, and the surfaces without DOMs inherit it exactly like the ones with them.
+
+The household was never the edge case. It was the preview.
+
 ---
 
 *See it live: the Share panel on any gated asset — visibility (Public / Group / Private / Specific People), single-use invites, expiry, declared peers, and the access record underneath, chain-verified on every read.*
