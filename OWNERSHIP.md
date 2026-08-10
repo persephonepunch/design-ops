@@ -31,6 +31,43 @@ someone's out-of-band change on the next apply.
 \* Secret **values** live only in Cloudflare Secrets Store. Terraform/Wrangler reference
 them by name; the plaintext is never in git and never in an AI context.
 
+## Platforms vs. Terraform providers
+
+Four platforms, **one Terraform provider**. A "provider" is a published plugin that
+teaches Terraform to drive a platform's API — and across this stack only Cloudflare
+has a real one. The other planes get the same discipline (a git-based, reviewable,
+deterministic representation) from their own native tooling. That unevenness is the
+honest architecture, not a gap to fill.
+
+| Plane          | Terraform provider?                                  | Its deterministic path instead |
+|----------------|------------------------------------------------------|--------------------------------|
+| **Cloudflare** | ✓ Official, mature (`cloudflare/cloudflare`, pinned in `versions.tf`) | Terraform for the infra ring (KV, queues, WAF, DNS, secret refs) + Wrangler for the Worker itself |
+| **Shopify**    | Partial, community-only — not a paved path           | Shopify CLI + theme/app code in git (`shopify app deploy`, theme push) |
+| **Xano**       | None                                                 | Xano branches + the Metadata API scripted in CI; the exported OpenAPI spec is the git artifact |
+| **Webflow**    | None                                                 | DevLink / Data API — plus the worker rails: fragments, variable ingest, published-Collection data layers |
+
+Do **not** adopt the community Shopify providers to force symmetry: they cover
+fragments of the Admin API, lag behind it, and would put a third manager on resources
+the worker and the Shopify CLI already own — which violates the drift rule above.
+
+### This stack's narrowing — structure as security, by design
+
+In this stack, Terraform's only interaction surface is the **server-side Cloudflare
+data plane — the KV namespaces — and it is locked**. This is not a limitation to
+grow out of; it is the security posture. The boundary is enforced by the structure
+itself — what each tool *cannot* reach — rather than by policy or trust:
+
+- **Terraform-owned means locked.** The KV namespaces Terraform manages are changed
+  only by editing HCL and letting CI apply. No dashboard edits, no wrangler by hand,
+  no MCP.
+- **Not available to AI.** AI's only relationship to this layer is authoring HCL diffs
+  upstream of the gate. It never applies, never reads or writes the KV data itself,
+  and the data is server-side only — never exposed to a client, never present in an
+  AI context.
+- Everything else Terraform *could* manage (WAF, DNS, queues) stays with its current
+  owner until deliberately adopted per the table above — adoption is a decision,
+  not a default.
+
 ## The AI / non-AI-dev handoff
 
 ```
