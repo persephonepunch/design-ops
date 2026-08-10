@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The omni-directional hub — four caller types, one brain, three stores.
+     Layers:
+       #background  – page ground
+       #callers     – four left boxes
+       #brain       – center commerce-brain box
+       #stores      – three right boxes
+       #arrows      – all connectors (arrowhead markers)
+       #labels      – connector labels, each with a white backing rect
+     Palette: ink #0a0a0a · muted #767676 · hairline #c9c9c9 · soft #f7f7f7 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="780" viewBox="0 0 1320 780" font-family="Roboto Mono, ui-monospace, Menlo, monospace">
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L8 4L0 8z" fill="#0a0a0a"/>
+    </marker>
+  </defs>
+
+  <rect id="background" width="1320" height="780" fill="#ffffff"/>
+
+  <g id="callers">
+    <g id="caller-chat">
+      <rect x="40" y="70" width="290" height="112" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="60" y="104" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">CHAT UI + LLM RUNNER</text>
+      <text x="60" y="130" font-size="12" fill="#767676">/preview drawer · agentic loop</text>
+      <text x="60" y="150" font-size="12" fill="#767676">picks a tool per turn</text>
+    </g>
+    <g id="caller-agent">
+      <rect x="40" y="240" width="290" height="112" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="60" y="274" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">EXTERNAL AGENT</text>
+      <text x="60" y="300" font-size="12" fill="#767676">Claude · UCP / AP2 actor</text>
+      <text x="60" y="320" font-size="12" fill="#767676">stateless MCP, header form</text>
+    </g>
+    <g id="caller-frontend">
+      <rect x="40" y="410" width="290" height="112" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="60" y="444" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">ANY FRONTEND</text>
+      <text x="60" y="470" font-size="12" fill="#767676">Webflow fragment · PDP block</text>
+      <text x="60" y="490" font-size="12" fill="#767676">plain REST /commerce/*</text>
+    </g>
+    <g id="caller-worker">
+      <rect x="40" y="600" width="290" height="112" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="60" y="634" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">THE WORKER ITSELF</text>
+      <text x="60" y="660" font-size="12" fill="#767676">webhooks · cron · consent gate</text>
+      <text x="60" y="680" font-size="12" fill="#767676">in-process, no network hop</text>
+    </g>
+  </g>
+
+  <g id="brain">
+    <rect x="500" y="190" width="330" height="340" fill="#f7f7f7" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="665" y="228" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="3" fill="#0a0a0a">COMMERCE BRAIN</text>
+    <text x="665" y="252" text-anchor="middle" font-size="11.5" fill="#767676">14 typed handle* functions</text>
+    <g id="brain-functions" font-size="13.5" text-anchor="middle" fill="#0a0a0a">
+      <text x="665" y="292">search · answer</text>
+      <text x="665" y="320">cart · orders · returns</text>
+      <text x="665" y="348">mandate · checkout</text>
+      <text x="665" y="376">market · consent</text>
+    </g>
+    <line x1="530" y1="402" x2="800" y2="402" stroke="#c9c9c9"/>
+    <g id="brain-notes" font-size="11.5" text-anchor="middle" fill="#767676">
+      <text x="665" y="430">every call re-proves identity:</text>
+      <text x="665" y="452">token / _meta · caps checked</text>
+      <text x="665" y="474">mandate enforced on checkout</text>
+      <text x="665" y="496">no session · no state held</text>
+    </g>
+  </g>
+
+  <g id="stores">
+    <g id="store-shopify">
+      <rect x="990" y="90" width="300" height="130" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="1010" y="124" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">SHOPIFY</text>
+      <text x="1010" y="150" font-size="12" fill="#767676">catalog · cart · orders</text>
+      <text x="1010" y="170" font-size="12" fill="#767676">hosted checkout —</text>
+      <text x="1010" y="190" font-size="12" fill="#767676">payment never enters chat</text>
+    </g>
+    <g id="store-xano">
+      <rect x="990" y="330" width="300" height="110" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="1010" y="364" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">XANO — OVER TLS</text>
+      <text x="1010" y="390" font-size="12" fill="#767676">identity · consent · caps</text>
+      <text x="1010" y="410" font-size="12" fill="#767676">source of record</text>
+    </g>
+    <g id="store-kv">
+      <rect x="990" y="560" width="300" height="90" fill="#ffffff" stroke="#0a0a0a"/>
+      <text x="1010" y="594" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a0a0a">WORKERS KV</text>
+      <text x="1010" y="620" font-size="12" fill="#767676">carts (24h) · hot state</text>
+    </g>
+  </g>
+
+  <g id="arrows" stroke="#0a0a0a" stroke-width="1.2" fill="none">
+    <line id="arrow-chat"     x1="334" y1="126" x2="494" y2="240" marker-end="url(#arrow)"/>
+    <line id="arrow-agent"    x1="334" y1="296" x2="494" y2="330" marker-end="url(#arrow)"/>
+    <line id="arrow-frontend" x1="334" y1="466" x2="494" y2="410" marker-end="url(#arrow)"/>
+    <line id="arrow-worker"   x1="334" y1="656" x2="494" y2="495" marker-end="url(#arrow)"/>
+    <line id="arrow-shopify"  x1="834" y1="270" x2="986" y2="170" marker-end="url(#arrow)"/>
+    <line id="arrow-webhook"  x1="986" y1="205" x2="838" y2="320" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+    <line id="arrow-xano"     x1="834" y1="380" x2="986" y2="385" marker-end="url(#arrow)"/>
+    <line id="arrow-kv"       x1="834" y1="470" x2="986" y2="590" marker-end="url(#arrow)"/>
+  </g>
+
+  <g id="labels" font-size="11.5" fill="#767676">
+    <g id="label-chat">
+      <rect x="340" y="152" width="132" height="40" fill="#ffffff"/>
+      <text x="346" y="168">tools/call ·</text>
+      <text x="346" y="186">one POST per turn</text>
+    </g>
+    <g id="label-agent">
+      <rect x="340" y="242" width="122" height="40" fill="#ffffff"/>
+      <text x="346" y="258">Mcp-Method</text>
+      <text x="346" y="276">+ _meta</text>
+    </g>
+    <g id="label-frontend">
+      <rect x="340" y="486" width="98" height="40" fill="#ffffff"/>
+      <text x="346" y="502">GET/POST</text>
+      <text x="346" y="520">+ bearer</text>
+    </g>
+    <g id="label-worker">
+      <rect x="340" y="586" width="150" height="40" fill="#ffffff"/>
+      <text x="346" y="602">direct</text>
+      <text x="346" y="620">function call</text>
+    </g>
+    <g id="label-shopify">
+      <rect x="842" y="230" width="104" height="40" fill="#ffffff"/>
+      <text x="848" y="246">Storefront +</text>
+      <text x="848" y="264">Admin GQL</text>
+    </g>
+    <g id="label-webhook">
+      <rect x="842" y="306" width="150" height="58" fill="#ffffff"/>
+      <text x="848" y="322" font-size="10.5">orders/paid webhook</text>
+      <text x="848" y="338" font-size="10.5">→ grant caps</text>
+      <text x="848" y="354" font-size="10.5">(purchase = permission)</text>
+    </g>
+    <g id="label-xano">
+      <rect x="842" y="352" width="134" height="22" fill="#ffffff"/>
+      <text x="848" y="368">per-request bearer</text>
+    </g>
+    <g id="label-kv">
+      <rect x="842" y="498" width="112" height="40" fill="#ffffff"/>
+      <text x="848" y="514">cart_id keyed</text>
+      <text x="848" y="532">to shopper</text>
+    </g>
+  </g>
+
+  <text id="caption" x="660" y="756" text-anchor="middle" font-size="12" letter-spacing="1" fill="#767676">THE OMNI-DIRECTIONAL HUB · FOUR CALLER TYPES · ONE BRAIN · THREE STORES</text>
+</svg>
