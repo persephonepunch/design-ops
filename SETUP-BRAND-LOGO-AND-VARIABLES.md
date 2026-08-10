@@ -42,4 +42,34 @@ Two short setups. Both follow the same law: **Webflow is where you author; one a
 
 Derived set also emitted by `theme.css`: `--brand-accent`, `--brand-font-heading`, `--brand-font-body`, `--brand-heading-weight`.
 
+## The full icon set — favicon, manifest, OG (15 slots, 7 required)
+
+The logo is one slot of a contracted set. **The filename IS the contract** — register each with the exact name below (`POST /brand/<slug>/assets` with `file`, `role`, `theme`, `alt`), and every consumer resolves it from the manifest. A missing slot is **never blank**: it falls back to your brand logo, then to a platform monochrome default — and every slot carries `alt` + `purpose` so screen readers, answer engines, and agents can read the set.
+
+| File (the contract) | Role | Theme | Size | Purpose | MVP |
+|---|---|---|---|---|---|
+| `app-any.svg` | app | any | any | Scalable app icon | ✓ |
+| `app-192.png` | app | any | 192×192 | Android home screen | ✓ |
+| `app-512.png` | app | any | 512×512 | Install / splash | ✓ |
+| `app-maskable-512.png` | maskable | any | 512×512 | Maskable (safe zone) | ✓ |
+| `apple-touch-icon-180.png` | apple-touch | any | 180×180 | iOS home screen | ✓ |
+| `favicon.svg` | favicon | any | any | Scalable tab icon | ✓ |
+| `favicon-32.png` | favicon | light | 32×32 | Standard tab | ✓ |
+| `favicon-16.png` | favicon | light | 16×16 | Small tab | — |
+| `favicon-dark-32.png` | favicon | dark | 32×32 | Dark-mode tab | — |
+| `favicon.ico` | favicon | any | 16–48 | Legacy favicon | — |
+| `brand-light.svg` | brand | light | any | Logo on light bg | — |
+| `brand-dark.svg` | brand | dark | any | Logo on dark bg | — |
+| `brand-light.png` | brand | light | 512× | Raster logo (light) | — |
+| `brand-dark.png` | brand | dark | 512× | Raster logo (dark) | — |
+| `brand-social.jpg` | brand | light | 1200×630 | **Social / OG card** | — |
+
+(`brand-light.svg` / `brand-dark.svg` are MVP in the live gate — the seven-slot MVP is: the three app icons, maskable, apple-touch, favicon.svg, favicon-32, plus the two brand SVGs.)
+
+Two endpoints read it back:
+- `GET /brand/<slug>/assets/manifest.json` — the **semantic manifest**: every slot with url, alt, purpose, and `status: provisioned | fallback | default` (machine-readable — AEO, agents, a11y)
+- the PWA web-app manifest consumes the same slots for install icons
+
+**The gate:** brand review is blocked until the MVP seven are `provisioned` — icon readiness is a release check, not a vibe.
+
 **One boundary to remember:** runtime `var()` consumers update everywhere within minutes of a save. Surfaces linking the **compiled** `uikit.css` are a Sass build artifact — recompile and upload after token changes. And anything hand-hardcoded never updates at all; if a surface looks frozen, audit for a missing `<link>`.
