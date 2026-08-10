@@ -72,4 +72,26 @@ Two endpoints read it back:
 
 **The gate:** brand review is blocked until the MVP seven are `provisioned` — icon readiness is a release check, not a vibe.
 
+## The set, generated and provisioned (2026-08-10)
+
+Produced from one Illustrator SVG (3.6 MB of editor metadata stripped → **3.5 KB** of pure polygons), rasterized by supersampling, registered 15/15 — **MVP READY**. Source files live in [`brand-assets/`](brand-assets/); the live set serves from the brand:
+
+| File | Size | Bytes | Serves from |
+|---|---|---|---|
+| [`app-any.svg`](brand-assets/app-any.svg) | any | 3,487 B | `crm-sync.dev/brand/test-brand/icons/app-any.svg` |
+| [`app-192.png`](brand-assets/app-192.png) | 192×192 | 2,062 B | `crm-sync.dev/brand/test-brand/icons/app-192.png` |
+| [`app-512.png`](brand-assets/app-512.png) | 512×512 | 10,425 B | `crm-sync.dev/brand/test-brand/icons/app-512.png` |
+| [`app-maskable-512.png`](brand-assets/app-maskable-512.png) | 512×512 | 9,201 B | `crm-sync.dev/brand/test-brand/icons/app-maskable-512.png` |
+| [`apple-touch-icon-180.png`](brand-assets/apple-touch-icon-180.png) | 180×180 | 1,927 B | `crm-sync.dev/brand/test-brand/icons/apple-touch-icon-180.png` |
+| [`favicon.svg`](brand-assets/favicon.svg) | any | 3,487 B | `crm-sync.dev/brand/test-brand/icons/favicon.svg` |
+| [`favicon-32.png`](brand-assets/favicon-32.png) | 32×32 | 1,124 B | `crm-sync.dev/brand/test-brand/icons/favicon-32.png` |
+| [`favicon-16.png`](brand-assets/favicon-16.png) | 16×16 | 492 B | `crm-sync.dev/brand/test-brand/icons/favicon-16.png` |
+| [`favicon-dark-32.png`](brand-assets/favicon-dark-32.png) | 32×32 | 1,209 B | `crm-sync.dev/brand/test-brand/icons/favicon-dark-32.png` |
+| [`favicon.ico`](brand-assets/favicon.ico) | 16/32/48 | 3,405 B | `crm-sync.dev/brand/test-brand/icons/favicon.ico` |
+| [`brand-light.svg`](brand-assets/brand-light.svg) | any (1277×686) | 3,487 B | `crm-sync.dev/brand/test-brand/logos/brand-light.svg` |
+| [`brand-dark.svg`](brand-assets/brand-dark.svg) | any (1277×686) | 3,487 B | `crm-sync.dev/brand/test-brand/logos/brand-dark.svg` |
+| [`brand-light.png`](brand-assets/brand-light.png) | 512×275 | 15,639 B | `crm-sync.dev/brand/test-brand/logos/brand-light.png` |
+| [`brand-dark.png`](brand-assets/brand-dark.png) | 512×275 | 15,506 B | `crm-sync.dev/brand/test-brand/logos/brand-dark.png` |
+| [`brand-social.jpg`](brand-assets/brand-social.jpg) | 1200×630 | 29,061 B | `crm-sync.dev/brand/test-brand/logos/brand-social.jpg` |
+
 **One boundary to remember:** runtime `var()` consumers update everywhere within minutes of a save. Surfaces linking the **compiled** `uikit.css` are a Sass build artifact — recompile and upload after token changes. And anything hand-hardcoded never updates at all; if a surface looks frozen, audit for a missing `<link>`.
