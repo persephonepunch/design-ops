@@ -32,6 +32,22 @@ Four load-bearing rules:
 - **[TERRAFORM-GITHUB-SETUP.md](TERRAFORM-GITHUB-SETUP.md)** — the 0→1 guideline for putting the infrastructure layer under GitHub-gated Terraform: least-privilege tokens, remote state, the PR plan/apply gate, progressive import, drift checks.
 - **[diagrams/omni-directional-hub.svg](diagrams/omni-directional-hub.svg)** — the architecture in one picture: four caller types (chat UI, external agents, any frontend, the worker itself), one commerce brain, three stores — every call carrying its own identity, no sessions, no state held.
 
+## The system, in three screens
+
+**1 · Name the atoms once, in Webflow.** The canonical 16 (see [the setup](SETUP-BRAND-LOGO-AND-VARIABLES.md)) as a Designer variable collection — no per-platform names, ever.
+
+![The uikit variable collection in the Webflow Designer — the canonical 16 names](images/webflow-uikit-variables.png)
+
+**2 · The record serves one address.** The brand card: identity, swatches, and the line that matters — `theme.css · tokens.json · uikit.scss/.less all serve from /brand/<slug>/…`.
+
+![Brand Studio card — Test Brand with swatches and the single serving address](images/brand-studio-card.png)
+
+**3 · Every surface renders the theme.** The kitchen sink: real UIkit components painted by the generated theme, light and dark, before anything ships.
+
+![Brand Studio kitchen sink — themed UIkit components rendering live](images/brand-studio-kitchen-sink.png)
+
+The loop these three close: variables named in the Designer → ingested with a dry-run diff → committed to the record → every linked surface repainted. Demonstrated end-to-end 2026-08-10: 16/16 matched, zero missing.
+
 ## The division of labor, restated
 
 **AI authors upstream of the gate.** It proposes shapes, HCL, and worker code as reviewable diffs. **Humans own the gate** — the PR review, the plan, the approval environment, the secrets. **Machines enforce the rest** — deterministic merges, capability checks, ledgers, contract tests. Nobody edits production by hand, and nothing depends on anyone's memory.
