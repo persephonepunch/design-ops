@@ -127,4 +127,45 @@ Products use `og-product-<product-handle>.jpg` on the identical contract.
 
 (22 published pages as of 2026-08-10; the `event-time` draft joins the list when it publishes.)
 
+## Fonts — @font-face URLs and the fallback stacks
+
+**The one-line consumption (preferred):** link the brand theme and all nine faces arrive with the tokens — never load fonts separately from colors:
+
+```html
+<link rel="stylesheet" href="https://crm-sync.dev/brand/test-brand/theme.css">
+```
+
+**The registered set** — 9 faces, self-hosted on the brand plane (the no-Google-Fonts rule: `fonts.googleapis.com` never appears; Webflow-uploaded files, vaulted, served from one address). Explicit blocks with absolute URLs, exactly as `theme.css` generates them:
+
+```css
+@font-face{font-family:"Geist";font-style:normal;font-weight:100;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd753e0ebbc7ef5dbc4_Geist-Thin.otf") format("opentype")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:200;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd7ff1aced367e61149_Geist-ExtraLight.otf") format("opentype")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:300;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd7eba61bdb55c98231_Geist-Light.otf") format("opentype")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:400;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd7a29af3d210bd2481_Geist-Regular.otf") format("opentype")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:500;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd77efe4ec902a0ee94_Geist-Medium.otf") format("opentype")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:600;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd7eda39f81ee373579_Geist-SemiBold.otf") format("opentype")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:700;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9cd7414158e8ecf0559e_Geist-Bold.otf") format("opentype")}
+@font-face{font-family:"Roboto Mono";font-style:normal;font-weight:400;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9e9cd6c48362298761d6_RobotoMono-Regular.ttf") format("truetype")}
+@font-face{font-family:"Roboto Mono";font-style:normal;font-weight:600;font-display:swap;src:url("https://crm-sync.dev/brand/test-brand/fonts/6a4d9e9c8025c44b613ed766_RobotoMono-SemiBold.ttf") format("truetype")}
+```
+
+**The fallback stacks** (design-system §4: token first, literal brand fallback, then system — a missing token or a blocked font never changes the register):
+
+```css
+:root {
+  --brand-font-heading: "Geist";
+  --brand-font-body: "Geist";
+}
+body {
+  font-family: var(--brand-font-heading, "Geist"), var(--_uikit---font-family, "Geist"),
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+code, .mono, [data-mono] {
+  font-family: "Roboto Mono", var(--_uikit---font-family-2, "IBM Plex Mono"),
+    ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+```
+
+Notes for the spec: Geist ships 100–700 (Thin through Bold — the heading register uses 100, per `--brand-heading-weight`); Roboto Mono ships 400/600. The Shopify theme additionally carries `roboto-vf.woff2` / `roboto-mono-vf.woff2` as *theme-internal* variable fonts (relative URLs inside `crm-chrome.css`) — theme-only, not part of the cross-platform contract; the nine brand-plane faces are the canonical set every platform links.
+
 **One boundary to remember:** runtime `var()` consumers update everywhere within minutes of a save. Surfaces linking the **compiled** `uikit.css` are a Sass build artifact — recompile and upload after token changes. And anything hand-hardcoded never updates at all; if a surface looks frozen, audit for a missing `<link>`.
