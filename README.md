@@ -21,6 +21,7 @@ Four load-bearing rules:
 
 ## In this repo
 
+- **[DESIGN-SYSTEM.md](DESIGN-SYSTEM.md)** — the enforcement-grade system: fast-load core, the L1–L5 fallback ladder, token consumption + canonical names, component scoping, custom selects, the native-chrome kill list, and load-order TDD.
 - **[WHY-THE-STACK.md](WHY-THE-STACK.md)** — the design guideline, in plain designer speak: why Webflow/Shopify/Xano/Cloudflare, the six rules (designer first · non-destructive · many contributors · roles & permissions · timestamps & receipts · one name for everything), and what good looks like on the page.
 - **[QUICKSTART.md](QUICKSTART.md)** — the demo for working devs: six copy-paste blocks, expected output shown, zero theory.
 - **[DEMO-SHAPE-5MIN.md](DEMO-SHAPE-5MIN.md)** — the full walkthrough with the reasoning: ten steps from reading the git-based shape to a capability-gated write, a re-rendering surface, and a verified chain.
