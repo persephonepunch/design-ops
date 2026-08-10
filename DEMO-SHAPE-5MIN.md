@@ -1,5 +1,7 @@
 # The 5-Minute Demo — Deterministic Data Shape
 
+> **Pick your altitude.** This page is the full walkthrough with the reasoning. If you just want to run it: **[QUICKSTART.md](QUICKSTART.md)** (six copy-paste blocks, expected output shown). If you don't read terminals at all: **[SETUP-WEBFLOW-SHAPES.md](SETUP-WEBFLOW-SHAPES.md)** and the Designer Guide on the Miro board.
+
 **What it proves:** the Design/Dev handoff moves from *editing content* to *exchanging data models*. The shape is versioned in git, merged deterministically at the edge with per-field provenance, written only under a capability, rendered live on an edge-served surface, and every commit is hash-chained.
 
 **Planes exercised:** GitHub (base model in a public spec repo) · Cloudflare (merge + gate + ledger at the edge) · commerce (a purchase mints the write capability — purchase = permission).

@@ -22,7 +22,8 @@ Four load-bearing rules:
 ## In this repo
 
 - **[WHY-THE-STACK.md](WHY-THE-STACK.md)** — the design guideline, in plain designer speak: why Webflow/Shopify/Xano/Cloudflare, the six rules (designer first · non-destructive · many contributors · roles & permissions · timestamps & receipts · one name for everything), and what good looks like on the page.
-- **[DEMO-SHAPE-5MIN.md](DEMO-SHAPE-5MIN.md)** — the live 0→1 proof: ten curl steps from reading the git-based shape to a capability-gated write, a re-rendering surface, and a verified chain.
+- **[QUICKSTART.md](QUICKSTART.md)** — the demo for working devs: six copy-paste blocks, expected output shown, zero theory.
+- **[DEMO-SHAPE-5MIN.md](DEMO-SHAPE-5MIN.md)** — the full walkthrough with the reasoning: ten steps from reading the git-based shape to a capability-gated write, a re-rendering surface, and a verified chain.
 - **[SETUP-WEBFLOW-SHAPES.md](SETUP-WEBFLOW-SHAPES.md)** — the designer setup, 1·2·3: author a shape layer from a Webflow Collection — create, publish, verify provenance. No code, no deploy.
 - **[XANO-TERRAFORM-FOR-DESIGNERS.md](XANO-TERRAFORM-FOR-DESIGNERS.md)** — the two dev-side words translated for designers: Xano as the record book, Terraform as the component system for infrastructure, and why design authors *inside* the same discipline.
 - **[SHARING-WITHOUT-PASSWORDS.md](SHARING-WITHOUT-PASSWORDS.md)** — the household problem, solved: grants with declared peers instead of shared passwords; fan-out beyond the declared count is a finding, not a lockout.
