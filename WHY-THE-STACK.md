@@ -31,7 +31,7 @@ Every piece has one full, unambiguous name — the model has a name, its fields 
 
 ## On the page
 
-The same care, at the surface level — pulled from the [design board](https://miro.com/app/board/uXjVHzE2Qc4=/?share_link_id=425952194337) on Miro:
+The same care, at the surface level — pulled from the [Design Studio board](https://miro.com/app/board/uXjVHzE2Qc4=/?share_link_id=425952194337) on Miro:
 
 - **The headline shows up and machines can read it.** A visible headline in a real H1 — not a styled div, not baked into an image. If the title is absent or unreadable to a machine, the page doesn't exist to half its audience.
 - **The CTA lands somewhere real.** The button leads to an actual action — a purchase event, a full-height frame that responds — never a scroll into nothing.
