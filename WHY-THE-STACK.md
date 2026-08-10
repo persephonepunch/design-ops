@@ -38,6 +38,18 @@ The same care, at the surface level — pulled from the [Effective Design board]
 - **Media behaves.** An accessible Play button; fullscreen playback with close, volume, and scrubbing — on every platform, not just the one it was designed on.
 - **Alternates are tested, not argued.** When two versions could work, both ship as an A/B — the data settles it.
 
+## The lineage — none of this is new
+
+This stack isn't a bet on new tools. It's the same ideas maturing for fifteen years, and we've been building on the API baseline for the last seven.
+
+- **It starts with Ruby.** The era that gave us HBO GO-class applications: convention over configuration, background jobs doing the heavy work off-stage, templates as windows onto data. Those habits are the DNA of everything below.
+- **Node came *from* Ruby.** Watch [Ryan Dahl's origin talk](https://youtu.be/EeYvFl7li9E?si=4UBevQ2PDdb54DzR) — Node was born from what Ruby's servers couldn't do: stay light, never block, handle everything as it arrives. That idea, taken to its conclusion, is today's edge function — the Cloudflare layer of this stack is Dahl's talk fully grown.
+- **Business Catalyst and PhoneGap made a promise** — one build that reaches every surface, sites and apps from one source. They were early; the promise was right. AEM and edge functions are that promise finally kept.
+- **Liquid is Ruby's gift to this stack.** Born at Shopify, adopted by GitHub — look at what GitHub and Liquid have shipped since 2020. When your Shopify theme renders, that's the Ruby lineage serving your design.
+- **Background tasks never went away.** The Ruby-era pattern — queue the heavy work, run it on schedule, keep the page fast — is exactly [Xano's background tasks](https://docs.xano.com/building/logic/background-tasks) today: preload the data, sync the records, off the request path. The page stays instant because the work already happened.
+
+The takeaway for a designer: the layers, the receipts, the publish-and-it-flows model — these aren't inventions of this project. They're the settled habits of the systems that won, assembled in one place.
+
 ## Where to go next
 
 - [Author a shape from Webflow](SETUP-WEBFLOW-SHAPES.md) — the 1·2·3 setup.
