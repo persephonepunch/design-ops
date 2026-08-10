@@ -26,7 +26,11 @@ The reason this model beats the password isn't just the audit trail. It's that *
 
 **And both run on data shaping.** A device and a game don't read your page — they read the model. The same deterministic shape that renders your banner renders a console lobby or a device's little status screen: one JSON contract, merged the same way every time, with provenance saying which layer set each field. Design once at the model level, and the surfaces without DOMs inherit it exactly like the ones with them.
 
-The household was never the edge case. It was the preview.
+**Dark warehouses — governance with nobody watching.** A lights-out warehouse is machines acting all day with no human in the room — which is exactly where ungoverned automation becomes a black box. Run it without agents under mandates and without server-side governance, and the building works fine right up until nobody can say what it did or why. The alternative is already on this page: every robot, scanner, and pick-arm acts inside a mandate — what it may move, fetch, or ship, with a cap and an expiry — and every scan lands as a row in the ledger. The dark warehouse doesn't need a supervisor on the floor; it needs what the household got. Governance isn't a person watching. It's a record being written.
+
+**Packages with evergreen QR data — the surface with no screen at all.** A printed code is the most permanent thing you ship: fixed the moment ink meets board, scanned for years by systems that don't exist yet. Evergreen means the *ink* never changes while the *data* never goes stale — the code resolves to a domain you own, and behind it sits the living model: today's price, today's manual, today's recall status, this buyer's language. Repoint the data, never reprint the box. It's data shaping for paper — the package is just one more surface reading the shape, and the scan it invites is one more ledger row in the same chain the warehouse and the household write to.
+
+The household was never the edge case. It was the preview — for the party, the living room, the warehouse floor, and the box on the doorstep.
 
 ---
 
