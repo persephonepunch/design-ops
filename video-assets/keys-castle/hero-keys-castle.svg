@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke="#0a0a0a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-label="A ring of keys held in the foreground, the castle small behind — you hold the keys to your own data">
+  <!-- the castle, small, upper right (what the keys open) -->
+  <g>
+    <rect x="590" y="150" width="120" height="96"/>
+    <path d="M590 150 v-16 h16 v10 h16 v-10 h16 v10 h16 v-10 h16 v10 h16 v-10 h16 v16"/>
+    <rect x="576" y="176" width="20" height="70"/>
+    <path d="M576 176 v-14 h20 v14"/>
+    <rect x="704" y="176" width="20" height="70"/>
+    <path d="M704 176 v-14 h20 v14"/>
+    <path d="M632 246 v-30 a18 18 0 0 1 36 0 v30"/>
+    <line x1="650" y1="188" x2="650" y2="246"/>
+    <path d="M560 246 h180"/>
+    <line x1="586" y1="146" x2="586" y2="128"/>
+    <path d="M586 130 l16 6 l-16 6"/>
+  </g>
+  <!-- key ring, foreground left -->
+  <circle cx="250" cy="180" r="58"/>
+  <circle cx="250" cy="180" r="49"/>
+  <!-- three keys threaded on the ring, fanned down -->
+  <!-- key A (left) -->
+  <circle cx="206" cy="228" r="17"/>
+  <circle cx="206" cy="228" r="7"/>
+  <line x1="200" y1="244" x2="176" y2="386"/>
+  <path d="M176 386 l-16 -3 M178 372 l-13 -3"/>
+  <!-- key B (centre) -->
+  <circle cx="252" cy="238" r="17"/>
+  <circle cx="252" cy="238" r="7"/>
+  <line x1="252" y1="255" x2="252" y2="400"/>
+  <path d="M252 400 l16 0 M252 386 l13 0"/>
+  <!-- key C (right) -->
+  <circle cx="298" cy="228" r="17"/>
+  <circle cx="298" cy="228" r="7"/>
+  <line x1="304" y1="244" x2="330" y2="386"/>
+  <path d="M330 386 l16 -3 M328 372 l13 -3"/>
+  <!-- sightline: these keys open that castle -->
+  <path d="M330 150 q120 -40 250 24" stroke-dasharray="4 9"/>
+  <!-- a hand cupping the ring from below (you hold them) -->
+  <path d="M196 300 q-20 8 -22 34 q30 22 78 22 q56 0 74 -20 q-4 -28 -22 -34"/>
+  <path d="M174 334 l-14 4 M326 314 l14 -2"/>
+</svg>

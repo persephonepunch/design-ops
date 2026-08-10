@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke="#0a0a0a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-label="One fortress holding everything, cracked open — when the single vault falls, it all falls">
+  <!-- ground -->
+  <line x1="70" y1="440" x2="730" y2="440"/>
+  <!-- the single great vault-fortress -->
+  <rect x="250" y="132" width="300" height="288"/>
+  <!-- crenellated fortress top -->
+  <path d="M250 132 v-24 h25 v24 h25 v-24 h25 v24 h25 v-24 h25 v24 h25 v-24 h25 v24 h25 v-24 h25 v24 h25 v-24 h25 v24 h25"/>
+  <!-- concentric dial -->
+  <circle cx="400" cy="262" r="106"/>
+  <circle cx="400" cy="262" r="76"/>
+  <circle cx="400" cy="262" r="44"/>
+  <circle cx="400" cy="262" r="13"/>
+  <!-- the crack: one jagged fault down the whole face -->
+  <path d="M402 108 l-28 60 l28 40 l-32 54 l30 46 l-24 72"/>
+  <!-- stress lines radiating off the fault -->
+  <path d="M338 196 l-22 -12"/>
+  <path d="M470 210 l24 -14"/>
+  <path d="M336 336 l-24 12"/>
+  <path d="M468 330 l24 12"/>
+  <!-- breached corner, gold spilling out -->
+  <path d="M356 420 l-16 -36 l42 10 l10 -28 l32 24 l16 30"/>
+  <!-- spilled heap on the ground -->
+  <circle cx="326" cy="452" r="11"/>
+  <circle cx="352" cy="460" r="11"/>
+  <circle cx="380" cy="454" r="11"/>
+  <circle cx="340" cy="440" r="9"/>
+  <circle cx="368" cy="440" r="9"/>
+  <path d="M326 452 h.01 M352 460 h.01 M380 454 h.01"/>
+  <!-- hinge + bolt heads -->
+  <rect x="540" y="204" width="16" height="48"/>
+  <rect x="540" y="292" width="16" height="48"/>
+  <circle cx="268" cy="150" r="5"/>
+  <circle cx="532" cy="150" r="5"/>
+  <circle cx="268" cy="404" r="5"/>
+  <circle cx="532" cy="404" r="5"/>
+</svg>

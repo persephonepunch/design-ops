@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke="#0a0a0a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-label="Three happy people, each holding up a gold coin in one hand and a key in the other — your data, owned and in people's hands">
+  <!-- floor -->
+  <line x1="70" y1="452" x2="730" y2="452"/>
+
+  <!-- figure 1 -->
+  <circle cx="200" cy="252" r="26"/>
+  <circle cx="191" cy="247" r="2.2" fill="#0a0a0a" stroke="none"/>
+  <circle cx="209" cy="247" r="2.2" fill="#0a0a0a" stroke="none"/>
+  <path d="M189 254 q11 12 22 0"/>
+  <path d="M168 452 v-70 q0 -44 32 -44 q32 0 32 44 v70"/>
+  <!-- raised hand + gold coin -->
+  <path d="M176 372 q-30 -26 -30 -78"/>
+  <circle cx="146" cy="272" r="15"/>
+  <circle cx="146" cy="272" r="6"/>
+  <path d="M146 251 v-9 M125 272 h-9 M131 257 l-7 -7 M161 257 l7 -7"/>
+  <!-- key in the other hand -->
+  <path d="M224 372 q26 6 34 26"/>
+  <circle cx="260" cy="404" r="9"/>
+  <circle cx="260" cy="404" r="3.4"/>
+  <line x1="260" y1="413" x2="260" y2="440"/>
+  <path d="M260 440 h12 M260 429 h9"/>
+
+  <!-- figure 2 -->
+  <circle cx="400" cy="252" r="26"/>
+  <circle cx="391" cy="247" r="2.2" fill="#0a0a0a" stroke="none"/>
+  <circle cx="409" cy="247" r="2.2" fill="#0a0a0a" stroke="none"/>
+  <path d="M389 254 q11 12 22 0"/>
+  <path d="M368 452 v-70 q0 -44 32 -44 q32 0 32 44 v70"/>
+  <path d="M376 372 q-30 -26 -30 -78"/>
+  <circle cx="346" cy="272" r="15"/>
+  <circle cx="346" cy="272" r="6"/>
+  <path d="M346 251 v-9 M325 272 h-9 M331 257 l-7 -7 M361 257 l7 -7"/>
+  <path d="M424 372 q26 6 34 26"/>
+  <circle cx="460" cy="404" r="9"/>
+  <circle cx="460" cy="404" r="3.4"/>
+  <line x1="460" y1="413" x2="460" y2="440"/>
+  <path d="M460 440 h12 M460 429 h9"/>
+
+  <!-- figure 3 -->
+  <circle cx="600" cy="252" r="26"/>
+  <circle cx="591" cy="247" r="2.2" fill="#0a0a0a" stroke="none"/>
+  <circle cx="609" cy="247" r="2.2" fill="#0a0a0a" stroke="none"/>
+  <path d="M589 254 q11 12 22 0"/>
+  <path d="M568 452 v-70 q0 -44 32 -44 q32 0 32 44 v70"/>
+  <path d="M576 372 q-30 -26 -30 -78"/>
+  <circle cx="546" cy="272" r="15"/>
+  <circle cx="546" cy="272" r="6"/>
+  <path d="M546 251 v-9 M525 272 h-9 M531 257 l-7 -7 M561 257 l7 -7"/>
+  <path d="M624 372 q26 6 34 26"/>
+  <circle cx="660" cy="404" r="9"/>
+  <circle cx="660" cy="404" r="3.4"/>
+  <line x1="660" y1="413" x2="660" y2="440"/>
+  <path d="M660 440 h12 M660 429 h9"/>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke="#0a0a0a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-label="ERP, CRM, DAM, PIM, WMS and RMA systems marooned on separate islands, split by chasms with broken bridges between them">
+  <!-- island 1: ERP -->
+  <path d="M56 372 h88 l14 44 h-116 z"/>
+  <path d="M56 372 l-6 26 M144 372 l8 26 M62 416 l-4 22 M148 416 l6 20"/>
+  <rect x="80" y="322" width="40" height="50"/>
+  <path d="M80 322 v-10 h10 v10 M100 322 v-10 h10 v10"/>
+  <rect x="92" y="340" width="16" height="18"/>
+  <text x="100" y="462" font-family="'Roboto Mono', ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#0a0a0a" stroke="none" text-anchor="middle">ERP</text>
+  <!-- island 2: CRM -->
+  <path d="M186 372 h88 l14 44 h-116 z"/>
+  <path d="M186 372 l-6 26 M274 372 l8 26 M192 416 l-4 20 M278 416 l6 22"/>
+  <rect x="210" y="322" width="40" height="50"/>
+  <path d="M210 322 v-10 h10 v10 M230 322 v-10 h10 v10"/>
+  <rect x="222" y="340" width="16" height="18"/>
+  <text x="230" y="462" font-family="'Roboto Mono', ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#0a0a0a" stroke="none" text-anchor="middle">CRM</text>
+  <!-- island 3: DAM -->
+  <path d="M316 372 h88 l14 44 h-116 z"/>
+  <path d="M316 372 l-6 24 M404 372 l8 26 M322 416 l-4 22 M408 416 l6 20"/>
+  <rect x="340" y="322" width="40" height="50"/>
+  <path d="M340 322 v-10 h10 v10 M360 322 v-10 h10 v10"/>
+  <rect x="352" y="340" width="16" height="18"/>
+  <text x="360" y="462" font-family="'Roboto Mono', ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#0a0a0a" stroke="none" text-anchor="middle">DAM</text>
+  <!-- island 4: PIM -->
+  <path d="M446 372 h88 l14 44 h-116 z"/>
+  <path d="M446 372 l-6 26 M534 372 l8 24 M452 416 l-4 20 M538 416 l6 22"/>
+  <rect x="470" y="322" width="40" height="50"/>
+  <path d="M470 322 v-10 h10 v10 M490 322 v-10 h10 v10"/>
+  <rect x="482" y="340" width="16" height="18"/>
+  <text x="490" y="462" font-family="'Roboto Mono', ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#0a0a0a" stroke="none" text-anchor="middle">PIM</text>
+  <!-- island 5: WMS -->
+  <path d="M576 372 h88 l14 44 h-116 z"/>
+  <path d="M576 372 l-6 24 M664 372 l8 26 M582 416 l-4 22 M668 416 l6 20"/>
+  <rect x="600" y="322" width="40" height="50"/>
+  <path d="M600 322 v-10 h10 v10 M620 322 v-10 h10 v10"/>
+  <rect x="612" y="340" width="16" height="18"/>
+  <text x="620" y="462" font-family="'Roboto Mono', ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#0a0a0a" stroke="none" text-anchor="middle">WMS</text>
+  <!-- island 6: RMA / Customer Service (further adrift, lower) -->
+  <path d="M700 398 h74 l12 40 h-98 z"/>
+  <path d="M700 398 l-6 24 M774 398 l8 24"/>
+  <rect x="720" y="352" width="36" height="46"/>
+  <path d="M720 352 v-10 h10 v10 M740 352 v-10 h10 v10"/>
+  <text x="737" y="486" font-family="'Roboto Mono', ui-monospace, monospace" font-size="13" letter-spacing="1.5" fill="#0a0a0a" stroke="none" text-anchor="middle">RMA / CS</text>
+  <!-- broken bridges: stubs reaching across every divide, never meeting -->
+  <path d="M158 356 h22" stroke-dasharray="5 7"/>
+  <path d="M266 356 h22" stroke-dasharray="5 7"/>
+  <path d="M288 356 h22" stroke-dasharray="5 7"/>
+  <path d="M396 356 h22" stroke-dasharray="5 7"/>
+  <path d="M418 356 h22" stroke-dasharray="5 7"/>
+  <path d="M526 356 h22" stroke-dasharray="5 7"/>
+  <path d="M548 356 h22" stroke-dasharray="5 7"/>
+  <path d="M656 356 h20" stroke-dasharray="5 7"/>
+  <path d="M678 372 l24 12" stroke-dasharray="5 7"/>
+  <!-- severed ends -->
+  <path d="M180 350 l0 12 M266 350 l0 12 M310 350 l0 12 M396 350 l0 12 M440 350 l0 12 M526 350 l0 12 M570 350 l0 12"/>
+  <!-- faint clouds/void in the chasms -->
+  <path d="M172 430 q10 -8 20 0 M300 434 q10 -8 20 0 M430 430 q10 -8 20 0 M560 434 q10 -8 20 0 M688 452 q10 -8 20 0"/>
+</svg>

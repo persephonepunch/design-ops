@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke="#0a0a0a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-label="Gold moving out of one chest into many small pouches, all threaded on a single spine — distribute the gold, nothing concentrated to steal">
+  <!-- open chest, lower-left -->
+  <rect x="96" y="316" width="150" height="92"/>
+  <path d="M96 316 l26 -40 h98 l26 40"/>
+  <path d="M122 276 l26 40 M220 276 l-26 40"/>
+  <line x1="96" y1="352" x2="246" y2="352"/>
+  <circle cx="140" cy="382" r="9"/>
+  <circle cx="166" cy="390" r="9"/>
+  <circle cx="192" cy="382" r="9"/>
+  <!-- the single spine that threads every pouch (connected, not divided) -->
+  <path d="M246 336 q80 -20 150 -70 q90 -64 190 -40 q80 20 120 96"/>
+  <!-- pouch glyph = drawstring bag + coin, repeated along the spine -->
+  <!-- pouch 1 -->
+  <circle cx="360" cy="212" r="24"/>
+  <path d="M348 194 l-6 -12 h36 l-6 12"/>
+  <circle cx="360" cy="214" r="8"/>
+  <path d="M360 214 h.01"/>
+  <path d="M336 168 l-6 -10 M384 168 l6 -10"/>
+  <!-- pouch 2 -->
+  <circle cx="500" cy="126" r="24"/>
+  <path d="M488 108 l-6 -12 h36 l-6 12"/>
+  <circle cx="500" cy="128" r="8"/>
+  <path d="M500 128 h.01"/>
+  <path d="M476 82 l-6 -10 M524 82 l6 -10"/>
+  <!-- pouch 3 -->
+  <circle cx="612" cy="188" r="24"/>
+  <path d="M600 170 l-6 -12 h36 l-6 12"/>
+  <circle cx="612" cy="190" r="8"/>
+  <path d="M612 190 h.01"/>
+  <!-- pouch 4 -->
+  <circle cx="686" cy="300" r="24"/>
+  <path d="M674 282 l-6 -12 h36 l-6 12"/>
+  <circle cx="686" cy="302" r="8"/>
+  <path d="M686 302 h.01"/>
+  <!-- pouch 5, cupped in an open hand (for people to use) -->
+  <circle cx="470" cy="330" r="24"/>
+  <path d="M458 312 l-6 -12 h36 l-6 12"/>
+  <circle cx="470" cy="332" r="8"/>
+  <path d="M470 332 h.01"/>
+  <path d="M436 356 q34 24 68 0"/>
+  <path d="M436 356 l-10 -6 M504 356 l10 -6"/>
+  <!-- pouch 6, cupped hand lower-left of centre -->
+  <circle cx="300" cy="330" r="22"/>
+  <path d="M289 313 l-6 -11 h34 l-6 11"/>
+  <circle cx="300" cy="332" r="7"/>
+  <path d="M300 332 h.01"/>
+  <path d="M268 354 q32 22 64 0"/>
+</svg>
