@@ -94,4 +94,37 @@ Produced from one Illustrator SVG (3.6 MB of editor metadata stripped → **3.5 
 | [`brand-dark.png`](brand-assets/brand-dark.png) | 512×275 | 15,506 B | `crm-sync.dev/brand/test-brand/logos/brand-dark.png` |
 | [`brand-social.jpg`](brand-assets/brand-social.jpg) | 1200×630 | 29,061 B | `crm-sync.dev/brand/test-brand/logos/brand-social.jpg` |
 
+## OG / JSON-LD image naming — the page list
+
+Same law as the icon set: **the filename is the contract.** One OG card per page, `1200×630 JPEG`, registered to the brand (`kind=logo`, `role=og`, `theme=light`, `name=og-<handle>`, alt = the page title) and served from `crm-sync.dev/brand/test-brand/logos/og-<handle>.jpg`. The same URL feeds BOTH `og:image` and the page's JSON-LD `image` field — one asset, two machine readers. Until a page's card exists, it falls back to the brand default **`brand-social.jpg`** — never blank, same ladder as the icons.
+
+Products use `og-product-<product-handle>.jpg` on the identical contract.
+
+| Page handle | Title | OG image (the contract) | Serves from |
+|---|---|---|---|
+| `home` | Home | `og-home.jpg` | `…/logos/og-home.jpg` |
+| `difference` | The Difference | `og-difference.jpg` | `…/logos/og-difference.jpg` |
+| `how-it-works` | How it works | `og-how-it-works.jpg` | `…/logos/og-how-it-works.jpg` |
+| `mission` | Mission | `og-mission.jpg` | `…/logos/og-mission.jpg` |
+| `products` | Products | `og-products.jpg` | `…/logos/og-products.jpg` |
+| `knowledge-base` | Knowledge Base | `og-knowledge-base.jpg` | `…/logos/og-knowledge-base.jpg` |
+| `firmware` | Protected Firmware | `og-firmware.jpg` | `…/logos/og-firmware.jpg` |
+| `channel` | Channel Publish | `og-channel.jpg` | `…/logos/og-channel.jpg` |
+| `build` | Build vs Buy | `og-build.jpg` | `…/logos/og-build.jpg` |
+| `pim-sync` | PIM Sync — 3D Asset Mirror | `og-pim-sync.jpg` | `…/logos/og-pim-sync.jpg` |
+| `omnibus` | Price Evidence — EU Omnibus | `og-omnibus.jpg` | `…/logos/og-omnibus.jpg` |
+| `shopify-deadline` | The 26 August Deadline | `og-shopify-deadline.jpg` | `…/logos/og-shopify-deadline.jpg` |
+| `signed` | For the Person Who Signed | `og-signed.jpg` | `…/logos/og-signed.jpg` |
+| `returns` | Returns & Review Sessions | `og-returns.jpg` | `…/logos/og-returns.jpg` |
+| `attio-alternative` | Attio Alternative | `og-attio-alternative.jpg` | `…/logos/og-attio-alternative.jpg` |
+| `hubspot-alternative` | HubSpot Alternative | `og-hubspot-alternative.jpg` | `…/logos/og-hubspot-alternative.jpg` |
+| `klaviyo-alternative` | Klaviyo Alternative | `og-klaviyo-alternative.jpg` | `…/logos/og-klaviyo-alternative.jpg` |
+| `privacy` | Privacy Policy | `og-privacy.jpg` | `…/logos/og-privacy.jpg` |
+| `terms` | Terms of Service | `og-terms.jpg` | `…/logos/og-terms.jpg` |
+| `refund` | Refund Policy | `og-refund.jpg` | `…/logos/og-refund.jpg` |
+| `data-requests` | Your Data Rights | `og-data-requests.jpg` | `…/logos/og-data-requests.jpg` |
+| `data-sharing-opt-out` | Your Privacy Choices | `og-data-sharing-opt-out.jpg` | `…/logos/og-data-sharing-opt-out.jpg` |
+
+(22 published pages as of 2026-08-10; the `event-time` draft joins the list when it publishes.)
+
 **One boundary to remember:** runtime `var()` consumers update everywhere within minutes of a save. Surfaces linking the **compiled** `uikit.css` are a Sass build artifact — recompile and upload after token changes. And anything hand-hardcoded never updates at all; if a surface looks frozen, audit for a missing `<link>`.
