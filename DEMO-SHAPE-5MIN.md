@@ -66,6 +66,7 @@ curl -s -X DELETE "$BASE/shape/promo" -H "Authorization: Bearer $KEY"
 - Invalid fields are **dropped, not erred** — `{"accent":"red","cta_href":"javascript:…"}` → 400 `no valid fields`; a bad layer can never poison the merge, the next layer down simply wins.
 - Read is public + `Cache-Control: no-store`; the write needs `design:shape:write`; the ledger read is public (`chain_intact` is recomputed per request).
 - If GitHub is unreachable the worker falls back to a bundled base copy (`base_layer:"assets-fallback"` makes that visible too).
+- A published Webflow "Shapes" Collection joins the merge as its own layer (`webflow-cms`, between the git base and the KV override) — see [SETUP-WEBFLOW-SHAPES.md](SETUP-WEBFLOW-SHAPES.md); `_meta.merge_order` states the full ladder on every read.
 
 ## The point, in one line
 
